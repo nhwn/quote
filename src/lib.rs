@@ -488,6 +488,13 @@ macro_rules! quote {
     }};
 }
 
+#[macro_export]
+macro_rules! quote_extend {
+    ($e:expr, $($tt:tt)*) => {{
+        let mut _s = $e;
+        $crate::quote_each_token!(_s $($tt)*);
+    }};
+}
 /// Same as `quote!`, but applies a given span to all tokens originating within
 /// the macro invocation.
 ///
