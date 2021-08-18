@@ -12,7 +12,7 @@ readme = "README.md"
 edition = "2018"
 
 [dependencies]
-proc-macro2 = { version = "1.0.20", default-features = false }
+proc-macro2 = { git = "https://github.com/nhwn/quote" }
 
 [dev-dependencies]
 rustversion = "1.0"
